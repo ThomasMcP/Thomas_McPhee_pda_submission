@@ -16,7 +16,7 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('2')
   })
 
-  it('should have number buttons that update the display of the running total', function(){
+  it('should have number buttons that update display of running total', function(){
     running_total = element(by.css('#running_total'))
     element(by.css('#number2')).click();
     element(by.css('#number1')).click();
@@ -32,7 +32,7 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('3')
   })
 
-  it('should chain multiple operators together', function(){
+  it('should chain multiple operators', function(){
     running_total = element(by.css('#running_total'))
     element(by.css('#number2')).click();
     element(by.css('#operator_add')).click();
@@ -76,7 +76,7 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('83394')
   })
 
-  it('should show not a number for divide by 0', function(){
+  it('should show message for dividing by 0', function(){
     running_total = element(by.css('#running_total'))
     element(by.css('#number7')).click();
     element(by.css('#operator_divide')).click();
