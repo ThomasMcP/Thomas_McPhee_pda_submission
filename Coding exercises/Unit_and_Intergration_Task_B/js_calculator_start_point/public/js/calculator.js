@@ -20,7 +20,8 @@ Calculator.prototype = {
   },
 
   divide: function(number){
-    this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
+    if (number === 0){this.runningTotal = "Not a Number"}
+    else {this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number)};
   },
 
   numberClick: function(number) {
@@ -54,7 +55,7 @@ Calculator.prototype = {
         this.multiply(this.runningTotal);
         break;
         case ('/'):
-        this.divide(this.runningTotal);
+            this.divide(this.runningTotal);
         break;
       }
     }
