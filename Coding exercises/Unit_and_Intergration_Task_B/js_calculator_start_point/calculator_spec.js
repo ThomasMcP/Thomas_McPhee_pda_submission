@@ -43,4 +43,14 @@ describe('calculator', function () {
     assert.equal(expected, actual);
   })
 
+  it('should be able to concatinate multiple number button clicks', function () {
+    calculator.numberClick(7);
+    calculator.numberClick(1);
+    assert.equal(calculator.runningTotal, 71);
+  })
+
+  it('it has a second sample test', function(){
+    assert.equal(false, false)
+  })
+
 });
